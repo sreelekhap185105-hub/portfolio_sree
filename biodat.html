@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sreelekha Portfolio — Biodat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    /* <-- same CSS as index.html, unchanged --> */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+   body {
+  font-family: 'Poppins', sans-serif;
+  background: #fefefe;
+  color: #1a1a1a; /* darker than #333 */
+  font-size:larger;
+}
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: 0.3s ease;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    .section {
+      padding: 60px 0;
+    }
+
+    .section-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 40px;
+  position: relative;
+  text-align: center;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  margin: 10px auto 0;
+  width: 60px;
+  height: 4px;
+  background-color: #ff5e8e;
+  border-radius: 2px;
+}
+
+   header {
+  background: #fff;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ff5e8e;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links a:hover {
+      color: #6c63ff;
+      transform: scale(1.05);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #ffe7ec, #fff9f5);
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .hero span {
+      color: #ff5e8e;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    .about-content {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      max-width: 850px;
+      margin: auto;
+    }
+    .about-content .intro {
+      text-align: center;
+      font-size: 1.05rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+    .about-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .about-box {
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      width: 250px;
+      transition: 0.3s ease;
+    }
+    .about-box:hover {
+      transform: translateY(-5px);
+    }
+    .about-box h3 {
+      color: #ff5e8e;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    .about-item {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+      color: #444;
+    }
+    .about-item i {
+      color: #6c63ff;
+      margin-right: 10px;
+    }
+
+    .skills-box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+    .skill-card {
+      background: #fff;
+      border: 2px solid #ff5e8e;
+      border-radius: 10px;
+      width: 250px;
+      padding: 25px;
+      text-align: center;
+      transition: 0.3s ease;
+    }
+    .skill-card:hover {
+      transform: scale(1.05);
+    }
+    .skill-card i {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    .skill-card h4 {
+      color: #6c63ff;
+      margin-bottom: 6px;
+    }
+    .skill-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .html-icon { color: #e44d26; }
+    .css-icon { color: #264de4; }
+    .js-icon { color: #f0db4f; }
+    .py-icon { color: #306998; }
+
+    .edu-timeline {
+      max-width: 700px;
+      margin: auto;
+      border-left: 3px solid #6c63ff;
+      padding-left: 25px;
+    }
+    .edu-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      position: relative;
+    }
+    .edu-card::before {
+      content: '';
+      position: absolute;
+      top: 25px;
+      left: -11px;
+      width: 16px;
+      height: 16px;
+      background: #ff5e8e;
+      border: 3px solid #fff;
+      border-radius: 50%;
+    }
+    .edu-card h3 {
+      color: #000;
+      margin-bottom: 5px;
+    }
+    
+    .edu-card p {
+      color: #444;
+      font-size: 0.95rem;
+    }
+    .edu-card .mark {
+      color: #28a745;
+      font-weight: bold;
+    }
+
+    .project-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+    .project-card {
+      background: #fff;
+      border: 1.5px solid #535050;
+      border-radius: 10px;
+      padding: 20px;
+      width: 334px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .project-card h3 {
+      color: #000;
+      margin-bottom: 10px;
+    }
+    .project-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0;
+    }
+    .tech-tags span {
+      background: #f0f0f0;
+      border: 1px solid #ff5e8e;
+      padding: 4px 8px;
+      font-size: 0.8rem;
+      border-radius: 4px;
+    }
+    .project-buttons {
+      margin-top: 10px;
+    }
+    .project-buttons a {
+      background: #6c63ff;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      margin-right: 10px;
+      display: inline-block;
+    }
+    .project-buttons a:hover {
+      background: #483dd7;
+    }
+
+    .certification-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .cert-card {
+      background: #fff;
+      border: 2px solid #ff5e8e;
+      padding: 20px;
+      border-radius: 10px;
+      width: 260px;
+      text-align: center;
+    }
+    .cert-card h3 {
+      color: #000;
+      margin-bottom: 5px;
+    }
+    .cert-card .verified {
+      color: #28a745;
+      font-size: 0.9rem;
+    }
+    .cert-card p {
+      font-size: 0.9rem;
+      color: #555;
+      margin: 10px 0;
+    }
+    .cert-card a {
+      background: #6c63ff;
+      color: #fff;
+      padding: 7px 14px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      display: inline-block;
+    }
+    .cert-card a:hover {
+      background: #483dd7;
+    }
+
+    .connect-boxes {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .connect-box {
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      padding: 15px 20px;
+      border-radius: 10px;
+    }
+    .connect-box h4 {
+      color: #ff5e8e;
+      margin-bottom: 5px;
+    }
+
+    footer {
+      background: #f0f0f0;
+      text-align: center;
+      padding: 20px;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      .nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .about-grid, .skills-box, .project-grid, .certification-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="container nav">
+      <div class="logo">Sreelekha</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="biodat.html">Biodata</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <p class="intro">I am a frontend enthusiast currently pursuing my B.E. in Computer Science. I love designing elegant, responsive, and user-friendly interfaces that make digital experiences enjoyable.</p>
+        <div class="about-grid">
+          <div class="about-box" >
+            <h3><i class="fas fa-user"></i> Profile</h3>
+            <div class="about-item"><i class="fas fa-id-badge"></i> Name: Sreelekha P</div>
+            <div class="about-item"><i class="fas fa-graduation-cap"></i> B.E. CSE</div>
+            <div class="about-item"><i class="fas fa-map-marker-alt"></i> India</div>
+          </div>
+          <div class="about-box">
+            <h3><i class="fas fa-language"></i> Languages</h3>
+            <div class="about-item"><i class="fas fa-comment-dots"></i> English</div>
+            <div class="about-item"><i class="fas fa-comment-dots"></i> Kannada</div>
+            <div class="about-item"><i class="fas fa-comment-dots"></i> Hindi</div>
+          </div>
+          <div class="about-box">
+            <h3><i class="fas fa-heart"></i> Hobbies</h3>
+            <div class="about-item"><i class="fas fa-palette"></i> UI Designing</div>
+            <div class="about-item"><i class="fas fa-music"></i> Listening to Music</div>
+            <div class="about-item"><i class="fas fa-book"></i> Reading Tech Blogs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="section" id="education">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-timeline">
+        <div class="edu-card">
+          <h3>B.E. – Computer Science(currently 3rd year)</h3>
+          <p  style="font-size: large; color: #000;">AKSHAYA INSTITUTE OF TECHOLOGY   </p><p> Tumkuru,karnataka</p>
+          <p><i class="fas fa-check-circle"></i> <span class="mark">CGPA: 8.8</span></p>
+        </div>
+        <div class="edu-card">
+          <h3>Pre-University</h3>
+          <p  style="font-size: large; color: #000;">NEW HORIZON PU COLLEGE.    </p><p></p><p>Kasturinagar,bengaluru</p>
+          <p><i class="fas fa-check-circle"></i> <span class="mark">85 %</span></p>
+        </div>
+        <div class="edu-card">
+          <h3>School</h3>
+          <p  style="font-size: large; color: #000;">ST.DON BOSCOS ENGLISH SCHOOL. </p>  <p>   B narayanapura, Bangaluru</p>
+          <p><i class="fas fa-check-circle"></i> <span class="mark">80 %</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact (kept here as anchor) -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title">Let’s Connect</h2>
+      <div class="connect-boxes">
+        <div class="connect-box">
+          <h4>Phone</h4>
+          <p>+91 7975015888</p>
+        </div>
+        <div class="connect-box">
+          <h4>Email</h4>
+          <a href="mailto:putturusreelekha@gmail.com">putturusreelekha@gmail.com</a>
+        </div>
+        <div class="connect-box">
+          <h4>LinkedIn</h4>
+          <a href="#">Connect with me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Sreelekha. All rights reserved.
+  </footer>
+
+</body>
+</html>

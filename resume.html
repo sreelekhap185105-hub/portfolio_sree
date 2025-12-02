@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sreelekha Portfolio — Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    /* <-- same CSS as index.html, unchanged --> */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+   body {
+  font-family: 'Poppins', sans-serif;
+  background: #fefefe;
+  color: #1a1a1a; /* darker than #333 */
+  font-size:larger;
+}
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: 0.3s ease;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    .section {
+      padding: 60px 0;
+    }
+
+    .section-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 40px;
+  position: relative;
+  text-align: center;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  margin: 10px auto 0;
+  width: 60px;
+  height: 4px;
+  background-color: #ff5e8e;
+  border-radius: 2px;
+}
+
+   header {
+  background: #fff;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ff5e8e;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links a:hover {
+      color: #6c63ff;
+      transform: scale(1.05);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #ffe7ec, #fff9f5);
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .hero span {
+      color: #ff5e8e;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    .about-content {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      max-width: 850px;
+      margin: auto;
+    }
+    .about-content .intro {
+      text-align: center;
+      font-size: 1.05rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+    .about-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .about-box {
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      width: 250px;
+      transition: 0.3s ease;
+    }
+    .about-box:hover {
+      transform: translateY(-5px);
+    }
+    .about-box h3 {
+      color: #ff5e8e;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    .about-item {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+      color: #444;
+    }
+    .about-item i {
+      color: #6c63ff;
+      margin-right: 10px;
+    }
+
+    .skills-box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+    .skill-card {
+      background: #fff;
+      border: 2px solid #ff5e8e;
+      border-radius: 10px;
+      width: 250px;
+      padding: 25px;
+      text-align: center;
+      transition: 0.3s ease;
+    }
+    .skill-card:hover {
+      transform: scale(1.05);
+    }
+    .skill-card i {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    .skill-card h4 {
+      color: #6c63ff;
+      margin-bottom: 6px;
+    }
+    .skill-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .html-icon { color: #e44d26; }
+    .css-icon { color: #264de4; }
+    .js-icon { color: #f0db4f; }
+    .py-icon { color: #306998; }
+
+    .edu-timeline {
+      max-width: 700px;
+      margin: auto;
+      border-left: 3px solid #6c63ff;
+      padding-left: 25px;
+    }
+    .edu-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      position: relative;
+    }
+    .edu-card::before {
+      content: '';
+      position: absolute;
+      top: 25px;
+      left: -11px;
+      width: 16px;
+      height: 16px;
+      background: #ff5e8e;
+      border: 3px solid #fff;
+      border-radius: 50%;
+    }
+    .edu-card h3 {
+      color: #000;
+      margin-bottom: 5px;
+    }
+    
+    .edu-card p {
+      color: #444;
+      font-size: 0.95rem;
+    }
+    .edu-card .mark {
+      color: #28a745;
+      font-weight: bold;
+    }
+
+    .project-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+    .project-card {
+      background: #fff;
+      border: 1.5px solid #535050;
+      border-radius: 10px;
+      padding: 20px;
+      width: 334px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .project-card h3 {
+      color: #000;
+      margin-bottom: 10px;
+    }
+    .project-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0;
+    }
+    .tech-tags span {
+      background: #f0f0f0;
+      border: 1px solid #ff5e8e;
+      padding: 4px 8px;
+      font-size: 0.8rem;
+      border-radius: 4px;
+    }
+    .project-buttons {
+      margin-top: 10px;
+    }
+    .project-buttons a {
+      background: #6c63ff;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      margin-right: 10px;
+      display: inline-block;
+    }
+    .project-buttons a:hover {
+      background: #483dd7;
+    }
+
+    .certification-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .cert-card {
+      background: #fff;
+      border: 2px solid #ff5e8e;
+      padding: 20px;
+      border-radius: 10px;
+      width: 260px;
+      text-align: center;
+    }
+    .cert-card h3 {
+      color: #000;
+      margin-bottom: 5px;
+    }
+    .cert-card .verified {
+      color: #28a745;
+      font-size: 0.9rem;
+    }
+    .cert-card p {
+      font-size: 0.9rem;
+      color: #555;
+      margin: 10px 0;
+    }
+    .cert-card a {
+      background: #6c63ff;
+      color: #fff;
+      padding: 7px 14px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      display: inline-block;
+    }
+    .cert-card a:hover {
+      background: #483dd7;
+    }
+
+    .connect-boxes {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .connect-box {
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      padding: 15px 20px;
+      border-radius: 10px;
+    }
+    .connect-box h4 {
+      color: #ff5e8e;
+      margin-bottom: 5px;
+    }
+
+    footer {
+      background: #f0f0f0;
+      text-align: center;
+      padding: 20px;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      .nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .about-grid, .skills-box, .project-grid, .certification-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="container nav">
+      <div class="logo">Sreelekha</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="biodat.html">Biodata</a></li>
+        <li><a href="#contact" onclick="location.href='biodat.html#contact';return false;">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Skills -->
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-box">
+        <div class="skill-card">
+          <i class="fab fa-html5 html-icon"></i>
+          <h4>HTML</h4>
+          <p style="font-size: large; color: #000;">Semantic markup and accessibility</p>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-css3-alt css-icon"></i>
+          <h4>CSS</h4>
+          <p  style="font-size: large; color: #000;">Responsive design, Flexbox, Grid</p>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-js-square js-icon"></i>
+          <h4>JavaScript</h4>
+          <p  style="font-size: large; color: #000;">Dynamic UI, DOM manipulation</p>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-python py-icon"></i>
+          <h4>Python</h4>
+          <p  style="font-size: large; color: #000;">Logic building and backend with Flask</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Ecommerece </h3>
+          <p>A responsive grocery e-commerce website that allows users to browse products, manage a cart, and place orders seamlessly.
+</p>
+          <div class="tech-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="project-buttons">
+            <a href="Grocery E-Commerce - Profile 1 - Microsoft​ Edge 2025-07-23 05-24-03 - Copy.mp4">View</a>
+            <a href="#">Source</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3>Smart Waste System</h3>
+          <p>Python Flask-based application that uses sensors to detect and classify plastic and metal waste automatically.</p>
+          <div class="tech-tags">
+            <span>Python</span><span>Flask</span><span>HTML</span>
+          </div>
+          <div class="project-buttons">
+            <a href="#">View</a>
+            <a href="#">Source</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3>Grocery Store Website</h3>
+          <p>E-commerce site built using Flask and Bootstrap for selling groceries with product filters and cart summary.</p>
+          <div class="tech-tags">
+            <span>Flask</span><span>Bootstrap</span><span>Python</span>
+          </div>
+          <div class="project-buttons">
+            <a href="#">View</a>
+            <a href="#">Source</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <h2 class="section-title">Certifications</h2>
+      <div class="certification-cards">
+        <div class="cert-card">
+          <h3>HTML, CSS, JavaScript</h3>
+          <div class="verified"><i class="fas fa-check-circle"></i> Verified - Udemy</div>
+          <p>Comprehensive web development course covering modern web fundamentals.</p>
+          <a href="udemy.jpg">View</a>
+        </div>
+        <div class="cert-card">
+          <h3>Python Programming</h3>
+          <div class="verified"><i class="fas fa-check-circle"></i> Verified - Infosys</div>
+          <p>Python programming certification focused on logic, data handling, and backend basics.</p>
+          <a href="infoys.jpg">View</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Sreelekha. All rights reserved.
+  </footer>
+
+</body>
+</html>
